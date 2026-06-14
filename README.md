@@ -77,6 +77,28 @@ Every participant works inside a single personal folder. The folder lives inside
         └── ...
 ```
 
+### Sunday Debug Repository Structure
+
+For **Weekly Debugging Challenges**, participants must **not** submit their files inside the `DSA` folder. Instead, they must use the following structure:
+
+```text
+100DaysOfCode-2026/
+└── Sunday_Debug/
+    └── Sunday_Debug_WeekNumber/
+        └── Participant_Name_SAPID/
+            └── Question
+```
+
+**Example:**
+
+```text
+100DaysOfCode-2026/
+└── Sunday_Debug/
+    └── Sunday_Debug_Week1/
+        └── John_500123456/
+            └── Question.c
+```
+
 ### Step-by-step setup
 
 **Step 1 — Fork the repository**
