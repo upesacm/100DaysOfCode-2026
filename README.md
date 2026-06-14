@@ -265,7 +265,7 @@ The following mistakes have come up repeatedly and affect scoring or automation.
 **Repository structure issues**
 - Your folder must be inside `DSA/` — placing it at the root level is incorrect
 - Create only one personal folder — duplicate folders split your points
-- Do not add sub-folders inside a day's folder — place solution files directly inside `Day1/`, `Day2/`, etc.
+- Do not add sub-folders inside a day's folder — place solution files directly inside `Day_1/`, `Day_2/`, etc.
 
 **Submission issues**
 - Both questions must be present — a day with only one question submitted is marked incomplete
