@@ -1,0 +1,1 @@
+This folder contains the previous day's coding questions for the 100 Days of Code Challenge. Participants can use these questions for practice, revision, and reference to strengthen their problem-solving skills.
