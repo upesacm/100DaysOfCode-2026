@@ -194,8 +194,8 @@ Day X Submission - Name - SAPID
 ```
 
 Examples:
-- `Day 1 Submission - Amaan - 500123456`
-- `Day 10 Submission - Priya - 500198765`
+- `Day 1 Submission - John - 500123456`
+- `Day 10 Submission - Olivia - 500198765`
 
 PRs with missing or incorrectly formatted titles may not be linked to your account during evaluation.
 
