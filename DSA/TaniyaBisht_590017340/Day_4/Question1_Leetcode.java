@@ -12,3 +12,6 @@ class Solution {
         return transpose;
     }
 }
+
+// TC: O(m*n)
+// SC: O(m*n)

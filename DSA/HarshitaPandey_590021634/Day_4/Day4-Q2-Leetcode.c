@@ -22,15 +22,20 @@ int main()
     }
 
    
-    for (i = 0; i < m; i++) {
-        for (j = 0; j < n; j++) {
+    for (i = 0; i < m; i++) 
+    {
+        for (j = 0; j < n; j++) 
+        {
             transpose[j][i] = matrix[i][j];
         }
     }
 
+    
     printf("Transpose of matrix:\n");
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < m; j++) {
+    for (i = 0; i < n; i++) 
+    {
+        for (j = 0; j < m; j++) 
+        {
             printf("%d ", transpose[i][j]);
         }
         printf("\n");

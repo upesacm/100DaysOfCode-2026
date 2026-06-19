@@ -19,6 +19,6 @@ class Solution {
     }
 }
 
-//logic: transpose means converting rows into columns.
+//logic: transpose means converting rows into columns!!
 //Element at position [i][j] moves to [j][i].
-//Create a new matrix and fill it using this rule.
+//Create a new matrix and fill it
