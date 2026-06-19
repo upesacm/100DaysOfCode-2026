@@ -1,4 +1,4 @@
-public class Question2_PartB {
+public class Question2 {
     public int Sum(int[] nums){
         int s = 0;
         for (int n:nums){

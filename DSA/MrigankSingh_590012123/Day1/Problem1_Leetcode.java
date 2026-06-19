@@ -1,0 +1,10 @@
+public class Problem1_Leetcode {
+    public int missing(int[] nums) {
+        int xor = nums.length;
+        for (int i = 0; i < nums.length; i++) {
+            xor ^= i;
+            xor ^= nums[i];
+        }
+        return xor;
+    }
+}
