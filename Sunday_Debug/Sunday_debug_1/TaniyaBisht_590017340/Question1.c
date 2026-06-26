@@ -1,0 +1,32 @@
+
+void addGoalToStadium2(int minute, int playerID) {
+    if(goalCount[2] >= MAX_GOALS) {
+        printf("Stadium 2 is full\n");
+        return;
+    }
+    goals[2][goalCount[2]] = minute;  // Stores goals in Stadium 2
+    playerGoals[playerID]++;
+    goalCount[2]++;
+}
+int totalGoals() {
+    int total = 0;
+    for(int s = 0; s < STADIUMS; s++) {  //Avoids out-of-bounds access
+        total += goalCount[s];
+    }
+    return total;
+}
+int topScorer() {
+    int maxG = playerGoals[0], winner = 0;  // Considers Player 0
+    for(int p = 1; p < PLAYERS; p++) {
+        if (playerGoals[p] > maxG) {
+            maxG = playerGoals[p];
+            winner = p;
+        }
+    }
+    return winner;
+}
+void displayStadium(int stadium) {
+    for(int i = 0; i < goalCount[stadium]; i++) { // Prevents array overflow
+        printf("%d ", goals[stadium][i]);
+    }
+}
