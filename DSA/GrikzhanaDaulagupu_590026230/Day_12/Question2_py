@@ -1,0 +1,30 @@
+def findSubString(s):
+    # Count distinct characters
+    distinct = len(set(s))
+
+    freq = {}
+    start = 0
+    count = 0
+    min_len = len(s) + 1
+
+    for end in range(len(s)):
+        freq[s[end]] = freq.get(s[end], 0) + 1
+
+        if freq[s[end]] == 1:
+            count += 1
+
+        while count == distinct:
+            min_len = min(min_len, end - start + 1)
+
+            freq[s[start]] -= 1
+            if freq[s[start]] == 0:
+                count -= 1
+
+            start += 1
+
+    return min_len
+
+
+# Driver Code
+s = input().strip()
+print(findSubString(s))

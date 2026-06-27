@@ -1,0 +1,22 @@
+class Solution(object):
+    def numberOfLines(self, widths, s):
+        lines = 1
+        current_width = 0
+
+        for ch in s:
+            w = widths[ord(ch) - ord('a')]
+
+            if current_width + w > 100:
+                lines += 1
+                current_width = w
+            else:
+                current_width += w
+
+        return [lines, current_width]
+
+
+widths = [10] * 26
+s = "abcdefghijklmnopqrstuvwxyz"
+
+sol = Solution()
+print(sol.numberOfLines(widths, s))
