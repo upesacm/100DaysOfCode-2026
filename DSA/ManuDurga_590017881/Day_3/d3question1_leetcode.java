@@ -21,11 +21,13 @@ class d3question1_leetcode{
             else{
             digits[i] = 0;}
         }
-        
+        sc.close();
+
         int[] copy = new int[digits.length + 1];
         copy[0] = 1;
         System.out.println(Arrays.toString(copy));
         return;
+
     }
 }
     

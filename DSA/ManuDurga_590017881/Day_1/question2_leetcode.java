@@ -14,4 +14,6 @@ class question2_leetcode{
         arr1=arr1^a[i];}
         for (int j:nums){arr2=arr2^j;}
         System.out.println(arr1^arr2); 
+        sc.close();
+
      }}

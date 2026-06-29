@@ -10,4 +10,6 @@ public class d2questiond1_technical {
         for (int i = 0; i < n; i++) {
             nums[i] = sc.nextInt();if(a<nums[i]){a=nums[i];}}
         System.out.println(a);
+        sc.close();
+
 }}

@@ -1,6 +1,6 @@
 package Day_11;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class d11question2_technical {
     public static void main(String[] args) {
