@@ -5,7 +5,7 @@ public class d13question2_technical {
     private static int countDistinctSubseq(String s) {
         int n = s.length();
         int[] dp = new int[n + 1];
-        dp[0] = 1; // empty subsequence
+        dp[0] = 1;
         int[] last = new int[256];
         Arrays.fill(last, -1);
 
@@ -31,5 +31,6 @@ public class d13question2_technical {
         } else {
             System.out.println(s2);
         }
+        sc.close();
     }
 }
