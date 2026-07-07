@@ -1,0 +1,19 @@
+'''Assign Cookies
+Explanation
+Given the greed factors of children (g) and the sizes of cookies (s), determine the maximum number of children that can be satisfied.'''
+
+class Solution(object):
+    def findContentChildren(self, g, s):
+        
+        g.sort()
+        s.sort()
+
+        child = 0
+        cookie = 0
+
+        while child < len(g) and cookie < len(s):
+            if s[cookie] >= g[child]:
+                child += 1
+            cookie += 1
+
+        return child
