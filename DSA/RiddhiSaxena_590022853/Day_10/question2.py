@@ -1,8 +1,0 @@
-s = input()
-
-distinct_chars = len(set(s))
-
-if distinct_chars % 2 == 0:
-    print("CHAT WITH HER!")
-else:
-    print("IGNORE HIM!")
