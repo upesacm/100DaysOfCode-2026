@@ -16,4 +16,3 @@ def nextGreater(arr):
 
 
 arr = list(map(int, input().split()))
-print(nextGreater(arr))
