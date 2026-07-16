@@ -1,0 +1,14 @@
+def num_boats(weights, limit):
+    weights.sort(reverse=True)    # index 0 = heaviest, last index = lightest
+    left = 0
+    right = len(weights) - 1
+    boats = 0
+    while left <= right:
+        if weights[left] + weights[right] <= limit:
+            right -= 1            # lightest soldier paired, consumed
+        left += 1                 # heaviest soldier always used this round
+        boats += 1
+    print(boats)
+weights = list(map(int, input().split()))
+limit = int(input())
+num_boats(weights, limit)

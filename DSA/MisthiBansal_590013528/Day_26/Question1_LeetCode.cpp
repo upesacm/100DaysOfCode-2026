@@ -1,37 +1,32 @@
-class Solution {
-public:
+#include <bits/stdc++.h>
+using namespace std;
 
-    void swipe(int &a, int &b)
-    {
-        int temp = a;
-        a = b;
-        b = temp;
+bool triplets(vector<int> &arr){
+ int i = 0;
+ int j = 1;
+ int k = 2;
+
+ while( i < arr.size() ||){
+    if( arr[i]== (arr[j]+arr[k]))
+    {return true;}
+    j++;
+    k++;
+    i++
+ }
+}
+int main(){
+     int n;
+
+    cout << "Enter the size of the array: ";
+    cin >> n;
+
+    vector<int> arr(n);
+
+    cout << "Enter the array elements: ";
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
 
-    void sortColors(vector<int>& nums) {
-
-        int r = 0;
-
-        // Pass 1: Move all 0s to the front
-        for(int i = 0; i < nums.size(); i++)
-        {
-            if(nums[i] == 0)
-            {
-                swipe(nums[i], nums[r]);
-                r++;
-            }
-        }
-
-        int w = r;
-
-        // Pass 2: Move all 1s after the 0s
-        for(int i = r; i < nums.size(); i++)
-        {
-            if(nums[i] == 1)
-            {
-                swipe(nums[i], nums[w]);
-                w++;
-            }
-        }
-    }
-};
+ 
+    return 0;
+}

@@ -1,14 +1,14 @@
 package Day_20;
-
+import Day_20.ListNode;
 import java.util.*;
-class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int val) {
-        this.val = val;
-        this.next = null;
-    }
-}
+// class ListNode {
+//     int val;
+//     ListNode next;
+//     ListNode(int val) {
+//         this.val = val;
+//         this.next = null;
+//     }
+// }
 
 public class d20question1_leetcode {
     
