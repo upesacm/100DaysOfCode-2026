@@ -1,5 +1,3 @@
-package DSA.TanmaySharma_590011578.Day_34;
-
 class MyQueue {
 
     Stack<Integer> input;
@@ -15,11 +13,7 @@ class MyQueue {
     }
 
     public int pop() {
-        if (output.isEmpty()) {
-            while (!input.isEmpty()) {
-                output.push(input.pop());
-            }
-        }
+        peek();
         return output.pop();
     }
 
@@ -36,11 +30,3 @@ class MyQueue {
         return input.isEmpty() && output.isEmpty();
     }
 }
-/**
- * Your MyQueue object will be instantiated and called as such:
- * MyQueue obj = new MyQueue();
- * obj.push(x);
- * int param_2 = obj.pop();
- * int param_3 = obj.peek();
- * boolean param_4 = obj.empty();
- */
