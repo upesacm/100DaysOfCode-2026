@@ -1,1 +1,0 @@
-Participants will commit their Sunday Debug Week 5 solutions in this folder. Each week's debugging challenge should be submitted in its respective Sunday_Debug_WeekNumber directory following the prescribed folder structure.
