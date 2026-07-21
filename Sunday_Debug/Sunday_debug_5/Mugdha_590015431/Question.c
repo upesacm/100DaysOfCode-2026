@@ -1,11 +1,14 @@
 #include <stdio.h>
+
 #define SIZE 5
 
-int stack[SIZE], top = -1;
+int stack[SIZE];
+int top = -1;
 
+// Push operation
 void push(int value)
 {
-    if (top == SIZE-1 )
+    if (top == SIZE - 1)
     {
         printf("Stack Full\n");
         return;
@@ -15,6 +18,7 @@ void push(int value)
     stack[top] = value;
 }
 
+// Pop operation
 void pop()
 {
     if (top == -1)
@@ -23,12 +27,13 @@ void pop()
         return;
     }
 
-  int popped=stack[top];
+    int popped = stack[top];
     top--;
+
     printf("Popped: %d\n", popped);
-    return;
 }
 
+// Swap top two elements
 void swapTop()
 {
     if (top < 1)
@@ -38,13 +43,11 @@ void swapTop()
     }
 
     int temp = stack[top];
-stack[top] = stack[top - 1];
-stack[top - 1] = temp;
-
+    stack[top] = stack[top - 1];
+    stack[top - 1] = temp;
 }
 
-
-
+// Display stack
 void display()
 {
     if (top == -1)
@@ -55,12 +58,9 @@ void display()
 
     printf("Remaining: ");
 
-    int i = top ;
-
-    while (i >= 0)
+    for (int i = top; i >= 0; i--)
     {
         printf("%d ", stack[i]);
-        i--;
     }
 
     printf("\n");
