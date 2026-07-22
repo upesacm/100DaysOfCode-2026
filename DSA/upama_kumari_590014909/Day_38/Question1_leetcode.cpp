@@ -18,7 +18,7 @@ public:
                 }
                 zero--;
             }else{
-                if(one==1){
+                if(one==0){
                     return sandwiches.size() - i;
                 }
                 one--;
@@ -26,4 +26,4 @@ public:
         }
         return 0;
     }
-}
+};
