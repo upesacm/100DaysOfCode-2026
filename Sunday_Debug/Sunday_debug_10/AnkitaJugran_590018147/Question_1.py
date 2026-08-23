@@ -5,35 +5,10 @@ class Node:
         self.left = None
         self.right = None
 
-def insert(root, value):
-
-    # Hulk recovered these lines from different files.
-    # Their order may not be correct.
-    if root is None:
-            return Node(value)
-    
-    if value < root.value:
-            root.left = insert(root.left, value)
-    elif value > root.value:
-        root.right = insert(root.right, value)
-
-    return root
-
-def search(root, target):
-
-    # Hulk may have moved some lines here too.
-    if root is None:
-            return False
-        
-    if root.value == target:
-        return True
-    elif target < root.value:
-        return search(root.left, target)
-    else:
-        return search(root.right, target)
 
 def insert(root, value):
 
+    # If tree/subtree is empty, create a new node
     if root is None:
         return Node(value)
 
@@ -43,7 +18,6 @@ def insert(root, value):
     elif value > root.value:
         root.right = insert(root.right, value)
 
-    # Duplicate: do nothing
     elif value == root.value:
         return root
 
@@ -52,15 +26,19 @@ def insert(root, value):
 
 def search(root, target):
 
+    # If we reach an empty subtree, target is not present
     if root is None:
         return False
 
+    # Target found
     if root.value == target:
         return True
 
+    # Search left subtree
     if target < root.value:
         return search(root.left, target)
 
+    # Search right subtree
     return search(root.right, target)
 
 

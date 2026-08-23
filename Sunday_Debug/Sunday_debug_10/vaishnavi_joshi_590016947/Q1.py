@@ -1,49 +1,24 @@
 class Node:
-
     def __init__(self, value):
         self.value = value
         self.left = None
         self.right = None
 
-def insert(root, value):
-
-    # Hulk recovered these lines from different files.
-    # Their order may not be correct.
-    if root is None:
-            return Node(value)
-    
-    if value < root.value:
-            root.left = insert(root.left, value)
-    elif value > root.value:
-        root.right = insert(root.right, value)
-
-    return root
-
-def search(root, target):
-
-    # Hulk may have moved some lines here too.
-    if root is None:
-            return False
-        
-    if root.value == target:
-        return True
-    elif target < root.value:
-        return search(root.left, target)
-    else:
-        return search(root.right, target)
 
 def insert(root, value):
-
+    # If tree/subtree is empty, create a new node
     if root is None:
         return Node(value)
 
+    # Smaller values go to the left
     if value < root.value:
         root.left = insert(root.left, value)
 
+    # Larger values go to the right
     elif value > root.value:
         root.right = insert(root.right, value)
 
-    # Duplicate: do nothing
+    # Duplicate values are ignored
     elif value == root.value:
         return root
 
@@ -51,16 +26,19 @@ def insert(root, value):
 
 
 def search(root, target):
-
+    # Empty subtree means target is not found
     if root is None:
         return False
 
+    # Target found
     if root.value == target:
         return True
 
+    # Search only the left side
     if target < root.value:
         return search(root.left, target)
 
+    # Search only the right side
     return search(root.right, target)
 
 

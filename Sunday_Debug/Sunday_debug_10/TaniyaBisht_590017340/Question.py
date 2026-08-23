@@ -1,3 +1,4 @@
+
 class Node:
 
     def __init__(self, value):
@@ -5,45 +6,22 @@ class Node:
         self.left = None
         self.right = None
 
-def insert(root, value):
-
-    # Hulk recovered these lines from different files.
-    # Their order may not be correct.
-    if root is None:
-            return Node(value)
-    
-    if value < root.value:
-            root.left = insert(root.left, value)
-    elif value > root.value:
-        root.right = insert(root.right, value)
-
-    return root
-
-def search(root, target):
-
-    # Hulk may have moved some lines here too.
-    if root is None:
-            return False
-        
-    if root.value == target:
-        return True
-    elif target < root.value:
-        return search(root.left, target)
-    else:
-        return search(root.right, target)
 
 def insert(root, value):
 
+    #Check if root is None BEFORE accessing root.value
     if root is None:
         return Node(value)
 
+    #Smaller values must go to the LEFT
     if value < root.value:
         root.left = insert(root.left, value)
 
+    #Larger values must go to the RIGHT
     elif value > root.value:
         root.right = insert(root.right, value)
 
-    # Duplicate: do nothing
+    #Duplicate values are ignored
     elif value == root.value:
         return root
 
@@ -52,15 +30,19 @@ def insert(root, value):
 
 def search(root, target):
 
+    #Check for None BEFORE accessing root.value
     if root is None:
         return False
 
+    #If the value is found, return True
     if root.value == target:
         return True
 
+    #If target is smaller, search ONLY the left subtree
     if target < root.value:
         return search(root.left, target)
 
+    #If target is larger, search ONLY the right subtree
     return search(root.right, target)
 
 
