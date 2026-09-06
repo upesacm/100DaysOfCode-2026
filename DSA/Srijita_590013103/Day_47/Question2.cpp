@@ -5,7 +5,7 @@ public:
         int n = A.size();
         int m = B.size();
 
-        // Always binary search on the smaller array
+       
         if (n > m)
             return kthElement(B, A, k);
 

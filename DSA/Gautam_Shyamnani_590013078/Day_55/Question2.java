@@ -34,7 +34,7 @@ class Question2 {
     }
 
     public static void main(String[] args) {
-        Question2 obj = new Question2();
+        Main obj = new Main();
         int[] length = {4, 15, 3, 6};
         int[] beauty = {7, 1, 6, 8};
         int k = 3;

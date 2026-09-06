@@ -1,0 +1,23 @@
+int findJudge(int n, int** trust, int trustSize, int* trustColSize) {
+    int score[n + 1];
+
+    for (int i = 0; i <= n; i++) {
+        score[i] = 0;
+    }
+
+    for (int i = 0; i < trustSize; i++) {
+        int person = trust[i][0];
+        int trusted = trust[i][1];
+
+        score[person]--;
+        score[trusted]++;
+    }
+
+    for (int i = 1; i <= n; i++) {
+        if (score[i] == n - 1) {
+            return i;
+        }
+    }
+
+    return -1;
+}

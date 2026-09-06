@@ -4,7 +4,7 @@ public:
 
         unordered_map<string, int> freq;
 
-        string winner = "";
+        string win = "";
         int maxGoals = 0;
 
         for (string team : goals) {
@@ -14,10 +14,10 @@ public:
             if (freq[team] > maxGoals) {
 
                 maxGoals = freq[team];
-                winner = team;
+                win = team;
             }
         }
 
-        return winner;
+        return win;
     }
 };
